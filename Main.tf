@@ -31,9 +31,9 @@ resource "aws_security_group" "Project-SG" {
 
 
 resource "aws_instance" "web" {
-  ami                    = "ami-001f2488b35ca8aad"
+  ami                    = "ami-00bb6a80f01f03502"
   instance_type          = "t2.large"
-  key_name               = "Kastro"
+  key_name               = "Seenu"
   vpc_security_group_ids = [aws_security_group.Project-SG.id]
   user_data              = templatefile("./resource.sh", {})
 
